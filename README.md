@@ -14,12 +14,12 @@ The first PWA Wrappable App Pattern is called: a TITLESCREEN.
 Using a vanilla naming convention, we get aTitleScreen after instantiation. Like inheriting from SplashScreen, but not. More like SEQUENCES. After SPLASHSCREEN completes, show lightning-fast TITLESCREEN, and with user-interaction - OPEN the media. Why all the trouble???
 
 
-## PURPOSE
+### PURPOSE
 
 SPEED. It is all about speed baby: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves the Time To Interaction problem. It gives the highest possible Lighthouse Audit score</i>, and it serves as a PERFORMANCE-BASELINE for future performance ops. 
 
 
-## RESULTS
+### RESULTS
 
 
 <img src="promo/baseline1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
@@ -27,7 +27,7 @@ SPEED. It is all about speed baby: Time to Paint, Time to Interaction. <i>A TITL
 That is the performance baseline. Mostly. Could still resize a logo, and 1 other thing.
 
 
-## INGREDIENTS
+### INGREDIENTS
 
 > - Add a single OPEN-BUTTON. 
 > - DYNAMICALLY-LOAD a BABYLONJS scene into the PWA.
@@ -40,19 +40,22 @@ That is the performance baseline. Mostly. Could still resize a logo, and 1 other
 
 <img src="promo/ops8.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
-That improved our Lighthouse Performance Audit Score by 15pts!
+That op improved our Lighthouse Performance Score by 15pts!
 
-And is a baseline benchmark to optimize against when making it heavy with animation again. 
+<img src="promo/beginning1.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
+
+And gave a benchmark to optimize against after beefing up the animations. 
 
 Isn't that cool? 
 
 We think so. :) 
 
-### More in the pipeline.
-
 <hr>
 
-Follow, like, subscribe!
+## More in the pipeline.
+
+
+Follow, like, and subscribe!
 
 MIT.
 
