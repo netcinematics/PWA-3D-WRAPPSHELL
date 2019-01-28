@@ -1,6 +1,7 @@
 # PWA-3D-WRAPPSHELL
 A PWA Template, with 3D power by BabylonJS, a hint of jQuery animation spice, and pure vanilla Wide-Ranging-AppShell. Introducing the VanillaWeb with Wrappables, in a wide-ranging-appshell. Welcome. Ready to get cookin' with Design Patterns? 
 
+<img src="promo/ops11.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
 # PWA Wrappables
 
@@ -10,34 +11,38 @@ The first wrappable APP PATTERN is called: TITLESCREEN.
 
 ## TITLESCREEN-(PWA-WRAPPABLE)-.
 
-A lot like inheriting from SplashScreen. But also more "TitleScreen evolves from SplashScreen" in a SEQUENCE. Show a lightning quick user-interactive TITLESCREEN. Why???
+A lot like inheriting from SplashScreen. But also, "TitleScreen evolves from SplashScreen" as a SEQUENCE. After SplashScreen, show a lightning quick user-interactive TITLESCREEN. Why???
 
 
 ## PURPOSE
 
-<i>A PWA Wrappable that maintain the highest possible Lighthouse Audit score</i>. Handy. And it opens up a HOST of other patterns. Which was a low-grade-humor pun. PWACampfire all set up. Let's get cookin! : )
+<i>A TITLESCREEN PWA Wrappable maintains the highest Lighthouse Audit score possible</i>. It serves as a PERFORMANCE-BASELINE. And it opens up a HOST of other patterns. Which was a terribly low-grade-pun. Your PWA-Campfire all set up. Let's get cookin! : )
 
 
 ## Ingredients
 
 > - Add a single OPEN-BUTTON. 
-> - DYNAMICALLY-LOAD a BABYLONJS scene into the PWA
+> - DYNAMICALLY-LOAD a BABYLONJS scene into the PWA.
 > - hide the BUTTON.
 
 ### EXAMPLE
-A TITLESCREEN wrapper with black-screen and simple open-button...
-<img src="promo/logo1.png" width="200" border="1px solid #ccc" style="border-radius: 13px;">
-Gives us a Lighthouse Audit Score Baseline, like this...
-<img src="promo/logo1.png" width="200" border="1px solid #ccc" style="border-radius: 13px;">
+A TITLESCREEN wrapper with black-screen (canvas) and open-button...
+<img src="promo/ops8.png" width="200px" border="1px solid #ccc" style="border-radius: 13px;">
+Gives a Lighthouse Audit Score (baseline), like this...
+<img src="promo/baseline1.png" width="400px" border="1px solid #ccc" style="border-radius: 13px;">
+
 
 Isn't that radical? 
 
 ### We think so. :) 
 
+With more in the pipeline.
+
 <hr>
 
-MIT.
+Follow, like, subscribe!
 
+MIT.
 
 <hr>
 
