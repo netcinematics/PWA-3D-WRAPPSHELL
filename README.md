@@ -29,11 +29,11 @@ Like inheriting from SplashScreen, but "TitleScreen evolves from SplashScreen". 
 
 A TITLESCREEN wrapper with black-screen (canvas) and open-button...
 
-<img src="promo/ops8.png" width="200px" border="1px solid #ccc" style="border-radius: 13px;">
+<img src="promo/ops8.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
 Gives a Lighthouse Audit Score (baseline), like this...
 
-<img src="promo/baseline1.png" width="400px" border="1px solid #ccc" style="border-radius: 13px;">
+<img src="promo/baseline1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
 
 Isn't that radical? 
 
