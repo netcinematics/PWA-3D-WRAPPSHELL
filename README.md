@@ -9,14 +9,14 @@ The first PWA Wrappable App Pattern is called: a TITLESCREEN.
 
 <hr>
 
-## ~TITLESCREEN.
+## ~TITLESCREEN
 
-Using a vanilla naming convention, we get aTitleScreen after instantiation. Like inheriting from SplashScreen, but not. More like SEQUENCES. After SPLASHSCREEN completes, show lightning-fast TITLESCREEN, and with user-interaction - OPEN the media. Why all the trouble???
+Using a vanillaweb naming convention, we get aTitleScreen after instantiation. Like that? Its a little bit like inheriting from SplashScreen, but not. More like SEQUENCES. Many SEQUENCES evolve one another. It is a SEQUENCE of SEQUENCES. That is all. After SPLASHSCREEN completes, show lightning-fast TITLESCREEN, with user-interaction, and OPEN the media. Why the middle-man???
 
 
 ### PURPOSE
 
-SPEED. It is all about speed baby: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves the Time To Interaction problem. It gives the highest possible Lighthouse Audit score</i>, and it serves as a PERFORMANCE-BASELINE for future performance ops. 
+SPEED. It is all about speed: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves the Time To Interaction problem. It gives the highest possible Lighthouse Audit score</i>, makes Time to Interaction quick, and makes scenes dynamically interchangable. Which, we think is radical. Not to mention, it serves as a PERFORMANCE-BASELINE for future performance ops. Like. +1. 
 
 
 ### RESULTS
@@ -24,7 +24,7 @@ SPEED. It is all about speed baby: Time to Paint, Time to Interaction. <i>A TITL
 
 <img src="promo/baseline1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
 
-That is the performance baseline. Mostly. Could still resize a logo, and 1 other thing.
+That is the performance baseline. Mostly. Could still resize a logo, and other small things.
 
 
 ### INGREDIENTS
@@ -36,7 +36,7 @@ That is the performance baseline. Mostly. Could still resize a logo, and 1 other
 
 ### EXAMPLE
 
->TITLESCREEN WrApper: w/ black-screen (canvas) & open-button:
+>TITLESCREEN Wrapper: w/ black-screen (canvas) & open-button:
 
 <img src="promo/ops8.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
@@ -44,11 +44,7 @@ That op improved our Lighthouse Performance Score by 15pts!
 
 <img src="promo/beginning1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
 
-And gave a benchmark to optimize against after beefing up the animations. 
-
-Isn't that cool? 
-
-We think so. :) 
+And gave a benchmark to optimize against while beefing up the animations. Isn't that cool? We think so. :) 
 
 <hr>
 
@@ -63,13 +59,13 @@ MIT.
 
 ## TUTORIAL
 
-PWA Template with BabylonJS - A 3D Progressive Web Appshell Template
+PWA Template with BabylonJS - A 3D Progressive Web Appshell Template - 3DWRAPPSHELL-.
 
 Powered by:
 
 [<img src="promo/logo1.png" width="200" border="3" style="border-radius: 10px;">](https://www.babylonjs.com/)
 
-Progressive Web Applications are a big innovation for the world wide web. Basically they enable HTML5 developers to take any Web Page and save it offline to a users "Homescreen" as an App, for easy access anytime! We think that is a game changer for distributing creative content with BabylonJS. Below you can learn how to take your 3D skills to the "Home screen" with no app store necessary. Use this template as an example of how to serve 3D PWA's from any SSL Website. 
+Progressive Web Applications are a big innovation for the world wide web. Basically they enable HTML5 developers to take any Web Page and save it offline to a users "Homescreen" as an App, for easy access anytime! We think that is cool for distributing creative content with BabylonJS. Below you can learn how to take your 3D skills to the "Home screen" with no app store necessary. Use this template as an example of how to serve 3D PWA's from any SSL Website. 
 
 ## PWA AppShell Template Examples
 - [AppShellTemplate Demo](https://www.anmscape.com/AppShellTemplate/public/index.html).
@@ -97,7 +93,7 @@ Be sure to check the W3C compatibility before going to production. PWA technolog
 
 <img src="promo/curio2.png" width="350" border="3" style="border-radius: 10px;">
 
-- [6) Use BabylonJS to add your own creations](https://doc.babylonjs.com/).
+6) Use [BabylonJS to add your own creations](https://doc.babylonjs.com/).
 
 <img src="promo/curio5.png" width="350" border="3" style="border-radius: 10px;">
 
@@ -105,7 +101,7 @@ Be sure to check the W3C compatibility before going to production. PWA technolog
 
 ## Under the hood
 
-In DevTools, Right Click > and Inspect Elements. Refresh > and check those cached files in the console log. It caches the skybox, 3D assets, audio and the "App Shell"! Not to mention the LocalStorage Runtime Database. We can render any cached content offline. And when we install, there is a smooth loading screen. Thank you BabylonJS! But don't forget the other gizmos like: hidden URL, SSL info, and screen orientation support. Jump back to your desktop/homescreen to find your App! Windows 10 installs the app link to the desktop, and we think that is a game changer for our 3D Apps business model.
+In DevTools, Right Click > and Inspect Elements. Refresh > and check those cached files in the console log. It caches the skybox, 3D assets, audio and the "App Shell"! Not to mention the LocalStorage Runtime Database. We can render any cached content offline. And when we install, there is a smooth loading screen. Thank you BabylonJS! But don't forget the other gizmos like: hidden URL, SSL info, and screen orientation support. Jump back to your desktop/homescreen to find your App! Windows 10 installs the app link to the desktop, and we think that is cool for 3D Apps.
 
 <pre>
 NOTES: 
@@ -130,7 +126,7 @@ TIPS:
 
 
 
-## App Shell (Template)
+## AppShell Template
 
 PWAs have a DESIGN PATTERN called "App Shell" and it is really clever. It separates content from the app (shell), so that each cache can be updated separately. This allows for an  <i>episodic </i> "Content Stream" to be updated in an ongoing basis, while the App Shell remains static. 
 
@@ -182,7 +178,6 @@ LINKS to great resources on Homescreen capabilities:
     ├── lib
     │   └── jquery (2D)
     │   └── babylon (3D)
-    │   └── materialize (CSS)
     │   └── ...
     ├── sonic
     │   └── ... (AUDIO)
@@ -213,8 +208,6 @@ STATUS: we still look to lazy-load 3D mesh with scenes that re-render with new m
 
 - [BabylonJS](https://www.babylonjs.com/) it's excellent.
 - [JQuery](https://jquery.com/) get hybrid 2D and 3D.
-- [Materialize](http://materializecss.com/). CSS boilerplate (optional). 
-
 
 
 ## Production
