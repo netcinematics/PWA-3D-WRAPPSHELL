@@ -11,12 +11,12 @@ The first PWA Wrappable App Pattern is called: a TITLESCREEN.
 
 ## ~TITLESCREEN
 
-Using a vanillaweb naming convention, we get aTitleScreen after instantiation. Like that? Its a little bit like inheriting from SplashScreen, but not. More like SEQUENCES. Many SEQUENCES evolve one another. It is a SEQUENCE of SEQUENCES. That is all. After SPLASHSCREEN completes, show lightning-fast TITLESCREEN, with user-interaction, and OPEN the media. Why the middle-man???
+Using a vanillaweb naming convention, we get aTitleScreen after instantiation. Like that? Its a little bit like inheriting from SplashScreen, but not. More like SEQUENCES. Many SEQUENCES evolve one another. It is a SEQUENCE of SEQUENCES. That is all. After SPLASHSCREEN completes, show lightning-fast TITLESCREEN, with user-interaction, and OPEN the media. Why???
 
 
 ### PURPOSE
 
-SPEED. It is all about speed: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves the Time To Interaction problem. It gives the highest possible Lighthouse Audit score</i>, makes Time to Interaction quick, and makes scenes dynamically interchangable. Which, we think is radical. Not to mention, it serves as a PERFORMANCE-BASELINE for future performance ops. Like. +1. 
+SPEED. It is all about speed: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves the Time To Interaction problem.</i> It gives the highest possible Lighthouse Audit score, makes Time to Interaction quick, and makes scenes dynamically interchangable. Which, we think is radical. Not to mention, it serves as a PERFORMANCE-BASELINE for future performance ops. Like. +1. 
 
 
 ### RESULTS
@@ -36,7 +36,7 @@ That is the performance baseline. Mostly. Could still resize a logo, and other s
 
 ### EXAMPLE
 
->TITLESCREEN Wrapper: w/ black-screen (canvas) & open-button:
+> TITLESCREEN Wrapper: w/ black-screen (canvas) & open-button:
 
 <img src="promo/ops8.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
@@ -45,6 +45,12 @@ That op improved our Lighthouse Performance Score by 15pts!
 <img src="promo/beginning1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
 
 And gave a benchmark to optimize against while beefing up the animations. Isn't that cool? We think so. :) 
+
+
+###
+
+NOTE: we have not gone asynchronous yet.
+
 
 <hr>
 
@@ -78,14 +84,16 @@ Progressive Web Applications are a big innovation for the world wide web. Basica
 Be sure to check the W3C compatibility before going to production. PWA technology is a "Progressive Enhancement" (meaning it is a vanilla web site underneath) and it will fallback to simple web page on any device or browser that does not support it. But all that is changing! So it's best to watch for browser support for things like the [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest#Browser_compatibility) and [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API#Specifications). Also [caniuse Service Workers](https://caniuse.com/#feat=serviceworkers) and [caniuse Web App Manifest](https://caniuse.com/#feat=web-app-manifest). At time of writing the only outstanding component is the Push API which is NOT on the roadmap for Safari iOS.
 
 
+UPDATE: [Safari gets beefy with PWAs?](https://medium.com/@firt/pwas-on-ios-12-2-beta-the-good-the-bad-and-the-not-sure-yet-if-good-a37b6fa6afbf)
+
 
 ## Create your own 3D Web App 
 
-1) Clone me.
+1) Clone.
 
 2) Set up [Web Server for Chrome](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#install_and_verify_web_server), (details below).
 
-3) Flip > that "Start Server" button. Click > the blue Localhost link, and the Web App pops up in your browser.
+3) Flip > that "Start Server" button. Click > the blue Localhost link, and the Web App pops up in your browser. Atomic!
 
 4) Then "Install" it with a Tap > using the (custom) "Add to Homescreen" button.
 
@@ -101,7 +109,16 @@ Be sure to check the W3C compatibility before going to production. PWA technolog
 
 ## Under the hood
 
-In DevTools, Right Click > and Inspect Elements. Refresh > and check those cached files in the console log. It caches the skybox, 3D assets, audio and the "App Shell"! Not to mention the LocalStorage Runtime Database. We can render any cached content offline. And when we install, there is a smooth loading screen. Thank you BabylonJS! But don't forget the other gizmos like: hidden URL, SSL info, and screen orientation support. Jump back to your desktop/homescreen to find your App! Windows 10 installs the app link to the desktop, and we think that is cool for 3D Apps.
+In DevTools, Right Click > and Inspect Elements. Refresh > and check those cached files in the console log. You renegade. It caches the skybox, 3D assets, audio and the "App Shell"! Not to mention that helpful LocalStorage Runtime Database. We can render any cached content offline, and hold game state too.  When we install, there is a smooth loading screen - thank BabylonJS! But don't forget the other PWA benefits like: 
+
+- hidden URL, 
+- SSL info, 
+- screen orientation support. 
+- app splash screen
+
+> Jump back to your desktop/homescreen to find your App! 
+
+Windows 10 installs the app link to the desktop, and we think that will usher in an era of 3D Apps.
 
 <pre>
 NOTES: 
