@@ -9,33 +9,45 @@ The first PWA Wrappable App Pattern is called: aTITLESCREEN.
 
 <hr>
 
-## aTITLESCREEN-.
+## TITLESCREEN~.
 
-Like inheriting from SplashScreen, but "TitleScreen evolves from SplashScreen". It does so as a SEQUENCE: after SplashScreen completes, show a lightning quick user-interactive TITLESCREEN. Why???
+Like inheriting from SplashScreen, but more like "TitleScreen elaborates, or evolves from SplashScreen". It is a SEQUENCE. We work with many sequences. After SplashScreen completes, show a lightning-fast TITLESCREEN, and with user-interaction - open the media. Why???
 
 
 ## PURPOSE
 
-<i>A TITLESCREEN PWA Wrappable maintains the highest Lighthouse Audit score possible</i>. It serves as a PERFORMANCE-BASELINE. And it opens up a HOST of other patterns. Which is a terrible pun of low-grade-humor. Like anything. Your PWA-Campfire all set up. Let's get cookin!
+SPEED. It is all about speed: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves that problem, and gives you the highest possible Lighthouse Audit score</i>. 
+
+>Also, it serves as a PERFORMANCE-BASELINE. 
+
+>And it opens up a HOST of other patterns in a 3D-Content-Pipeline. Terrible pun.
+
+## RESULTS
 
 
-## Ingredients
+<img src="promo/baseline1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
+
+That is the baseline. Mostly.
+
+
+## INGREDIENTS
 
 > - Add a single OPEN-BUTTON. 
 > - DYNAMICALLY-LOAD a BABYLONJS scene into the PWA.
 > - hide the BUTTON.
 
+
 ### EXAMPLE
 
-A TITLESCREEN wrapper with black-screen (canvas) and open-button...
+>TITLESCREEN WrApper: w/ black-screen (canvas) & open-button:
 
 <img src="promo/ops8.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
-Gives a Lighthouse Audit Score (baseline), like this...
+That improved our Lighthouse Performance Audit Score by 15pts!
 
-<img src="promo/baseline1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
+And is a baseline benchmark to optimize against when making it heavy with animation again. 
 
-Isn't that radical? 
+Isn't that cool? 
 
 We think so. :) 
 
