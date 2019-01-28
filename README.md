@@ -42,7 +42,7 @@ That is the performance baseline. Mostly. Could still resize a logo, and 1 other
 
 That op improved our Lighthouse Performance Score by 15pts!
 
-<img src="promo/beginning1.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
+<img src="promo/beginning1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
 
 And gave a benchmark to optimize against after beefing up the animations. 
 
