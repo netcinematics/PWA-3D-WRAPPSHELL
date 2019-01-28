@@ -1,33 +1,30 @@
 # PWA-3D-WRAPPSHELL
-A PWA Template, with 3D power by BabylonJS, a hint of jQuery animation spice, and pure vanilla Wide-Ranging-AppShell. Introducing the VanillaWeb with Wrappables, in a wide-ranging-appshell. Welcome. Take a look below for some PWA Design Patterns.
+A PWA Template, with 3D power by BabylonJS, a hint of jQuery animation spice, and pure vanilla Wrappable-AppShell. Introducing the VanillaWeb with Wrappables, in a wide-ranging-appshell. Welcome. Take a look below for some PWA Design Patterns.
 
 <img src="promo/ops11.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
 # PWA Wrappables
 
-The first PWA Wrappable App Pattern is called: aTITLESCREEN. 
+The first PWA Wrappable App Pattern is called: a TITLESCREEN. 
 
 <hr>
 
-## TITLESCREEN~.
+## ~TITLESCREEN.
 
-Like inheriting from SplashScreen, but more like "TitleScreen elaborates, or evolves from SplashScreen". It is a SEQUENCE. We work with many sequences. After SplashScreen completes, show a lightning-fast TITLESCREEN, and with user-interaction - open the media. Why???
+Using a vanilla naming convention, we get aTitleScreen after instantiation. Like inheriting from SplashScreen, but not. More like SEQUENCES. After SPLASHSCREEN completes, show lightning-fast TITLESCREEN, and with user-interaction - OPEN the media. Why all the trouble???
 
 
 ## PURPOSE
 
-SPEED. It is all about speed: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves that problem, and gives you the highest possible Lighthouse Audit score</i>. 
+SPEED. It is all about speed baby: Time to Paint, Time to Interaction. <i>A TITLESCREEN PWA Wrappable solves the Time To Interaction problem. It gives the highest possible Lighthouse Audit score</i>, and it serves as a PERFORMANCE-BASELINE for future performance ops. 
 
->Also, it serves as a PERFORMANCE-BASELINE. 
-
->And it opens up a HOST of other patterns in a 3D-Content-Pipeline. Terrible pun.
 
 ## RESULTS
 
 
 <img src="promo/baseline1.png" width="600px" border="1px solid #ccc" style="border-radius: 13px;">
 
-That is the baseline. Mostly.
+That is the performance baseline. Mostly. Could still resize a logo, and 1 other thing.
 
 
 ## INGREDIENTS
