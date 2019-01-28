@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--***********************************************-APP-SHELL-************************************-->
+<title>3D-WRAPPSHELL-!</title>
+<link rel="manifest" href="./manifest.json">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Description" content="Hyper-optimized 3D-WrAppShell-Template, so we all can rock a PWA on the wurld-wild-web!">
+<meta name="theme-color" content="#ccc"/>
+<!-- **********************************-VENDOR-PREFIXES-**************************************-->
+<!-- Safari on iOS --> <!-- vendor-app-prefixes -->
+<meta name="mobile-web-app-capable" content="yes">
+<!-- <meta name="apple-mobile-web-app-capable" content="yes"> --> <!-- deprecated, fix above -->
+<meta name="apple-mobile-web-app-title" content="3D-APPSHELL!">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="img/logos/logo1_152x152.png">
+<!-- Windows -->
+<meta name="msapplication-TileImage" content="img/logos/logo1_144x144.png">
+<meta name="msapplication-TileColor" content="#2F3BA2">
+<link rel="icon" type="image/png" href="img/logos/logo1_144x144.png">
+<!-- ***************************************-TEMPLATE-APP-**************************************** -->
+<style>
+    html, body {
+        overflow: hidden;
+        width   : 100%;
+        height  : 100%;
+        margin  : 0;
+        padding : 0;
+        background-color:#000;
+    }
+    #renderCanvas {
+        width   : 100%;
+        height  : 100%;
+        touch-action: none;
+    }
+</style>
+<style> /*----------------------------------------------------------Mobile-FIRST-RWD--*/
+    @media only screen and (max-width: 350px) { /*mobile styles*/
+       #mainTitle { font-size:1.0rem; }
+    }
+    @media only screen and (min-width: 350px) { /*mobile styles*/
+       #mainTitle { font-size:1.2rem; }
+    }
+    @media only screen and (min-width: 650px) { /*tablet styles*/
+       #mainTitle { font-size:1.8rem; }
+    }
+    @media only screen and (min-width: 800px) { /*desktop styles*/
+       #mainTitle { font-size:2.1rem; }
+    }
+</style>
+</head>
+<body>
+<script async type="text/javascript">
+    /*****************-NET-CINEMATICS-*******************/
+    let nx = {};
+    nx.sonic={};
+    nx.sonic.toggle=0; //0off 1on
+</script>
+<!--***********************************************-END-APP-SHELL-************************************-->
+<!--***********************************************-COMPONENT-SHELL-************************************-->
+<!--***********************************************-TITLE-COMPONENT-************************************-->
+<style>.nav1{position:absolute; width:100%; height:50px; background:black;}
+       .centerTitle{display:block; width:35%; margin:0 auto; padding-top:5px; font-family:fantasy; text-align:center; color:#bed9f1;}</style>
+<nav class="nav1">
+  <div>
+    <style>
+        .fancy{text-shadow: 2px 3px 1px #57025f, 2px 0px 2px #b10606, 0px -2px 2px #0dd411, 4px 4px 4px blue;}
+    </style>
+    <a id="mainTitle" class="centerTitle fancy" href="#">3D-WRAPPSHELL-!</a>
+  </div>
+</nav>
+<!--********************************-HOMESCREEN-COMPONENT-********************************-->
+<aside>
+  <style>.add-button {position:absolute;top:55px;right:2px;border-radius:10px;cursor:pointer;} </style>
+  <button class="add-button center">Get App!</button>
+  <script async type="text/javascript">//App install banners/Add to Home Screen by Pete LaPage.
+    let deferredPrompt; //https://developers.google.com/web/fundamentals/app-install-banners/
+    const addBtn = document.querySelector('.add-button');
+    addBtn.style.display = 'none'; //hide-A2HS-initially-.
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault(); // Prevent Chrome 67 and earlier from automatically showing the prompt
+      deferredPrompt = e; // Stash the event so it can be triggered later.
+      addBtn.style.display = 'block';  // Update UI to notify the user they can add to home screen
+      addBtn.addEventListener('click', (e) => {
+        addBtn.style.display = 'none';// hide our ui A2HS button
+        deferredPrompt.prompt(); // Show the prompt
+        deferredPrompt.userChoice.then((choiceResult) => { // Wait for the user to respond to the prompt
+            if (choiceResult.outcome === 'accepted') {
+              console.log('User accepts A2HS.');
+            } else {
+              console.log('User dismissed A2HS.');
+            }
+            deferredPrompt = null;
+          });
+      });
+    });
+  </script>
+</aside>
+<!--***************************-HOMESCREEN-COMPONENT-********************************-->
+<!--*********************************-APP-LOGO-COMPONENT-********************************-->
+<aside>
+    <style>.logo1Txt{position:absolute;top:0px;left:13px;font-size:0.6em;color:silver;}</style>
+    <style>.logo1Style{ position: absolute; top: 5px; left: 8px; width: 44px; }</style>
+    <a href="https://www.anmscape.com/" target="_blank"><img class="logo1Style" src="./img/logos/logo1_128x128.png" alt="logo" aria-label="logo"/></a>
+    <a href="https://www.anmscape.com/" target="_blank"><span class="logo1Txt">your logo</span></a>
+</aside>
+<!--********************************-APP-LOGO-COMPONENT-********************************-->
+<!--*********************************-ENGINE-LOGO-COMPONENT-********************************-->
+<aside>
+    <style>.logo2Txt{position:absolute;top:0;right:8px;font-size:0.6em;color:silver;}</style>
+    <style>.logo2Style{ position: absolute; top: 10px; right: 8px; width: 34px; }</style>
+    <a href="https://www.babylonjs.com/" rel="noopener" target="_blank"><img class="logo2Style" src="./img/logos/bjslogo1.png" alt="logo" aria-label="logo"/></a>
+    <a href="https://www.babylonjs.com/" rel="noopener" target="_blank"><span class="logo2Txt">powered by</span></a>
+</aside>
+<!--********************************-ENGINE-LOGO-COMPONENT-********************************-->
+<!--*************************************AUDIO-COMPONENT*******************************-->
+<aside>
+    <style>#sonicBtn { position: absolute; top: 55px; left: 2px; border-radius: 10px; cursor:pointer; } </style>
+    <button id=sonicBtn style="display:none;">sound test</button>
+    <script async type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function(){
+            var sonicBtn = $("#sonicBtn");
+            var playSounds = function(){
+                nx.sonic.soundObjTrack1.play();
+                nx.sonic.soundObjBlip2.play();
+                sonicBtn.html('sound on')
+            }
+            sonicBtn.on({ 
+                click: function (e) {
+                    if(!nx.sonic.toggle){
+                        playSounds();
+                    } else {
+                        nx.sonic.soundObjTrack1.stop();
+                        sonicBtn.html('sound off')
+                    }
+                    nx.sonic.toggle = !nx.sonic.toggle;
+                }
+            });
+        });
+    </script>
+</aside>
+<!--********************************AUDIO-COMPONENT*******************************-->
+<!--*****************************-END-COMPONENT-SHELL-************************************-->
+<!--***********************************************-BABYLON-CONTENT-SHELL-************************************-->
+<canvas id="renderCanvas"></canvas>
+<script async type="text/javascript">
+var initWrAppShell;
+window.addEventListener('DOMContentLoaded', function(){
+    initWrAppShell = function(){
+        var canvas = document.getElementById('renderCanvas');
+        var engine = new BABYLON.Engine(canvas, true);
+        var scene;
+        var arcRotateCamera;
+        /*********************************-CREATE-GROUND-******************************/
+        var ground;
+        var createGround = function() {
+            var ground = BABYLON.Mesh.CreateGround("ground1", 100, 100, 2, scene);  //GRID
+            var gridMaterial = new BABYLON.GridMaterial("", scene);
+            gridMaterial.mainColor = new BABYLON.Color3(187/255, 187/255, 204/255); 
+            gridMaterial.lineColor = new BABYLON.Color3(86/255, 110/255, 173/255); //steelblue
+            ground.material = gridMaterial;
+        }
+        /******************************-CREATE-SKY-*******************************/
+        var createSky = function () {
+            var skybox = BABYLON.Mesh.CreateBox("skybox", 1800, scene); //skybox
+            var skyboxMaterial = new BABYLON.StandardMaterial("skybox", scene);
+            skyboxMaterial.backFaceCulling = false;
+            skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("./3d/skybox/skybox", scene);
+            skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+            skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+            skyboxMaterial.disableLighting = true;
+            skybox.material = skyboxMaterial;
+            skybox.isPickable = false;
+            skybox.rotation.x = -0.75; //1.15 sun
+        }
+        /*********************************-CREATE-LIGHTS-******************************/
+        var spot1, light1, light2;
+        var createLights = function() {
+            var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0,10,0), scene);
+            light.intensity = 0.4;
+            light1 = new BABYLON.DirectionalLight("dir01", new BABYLON.Vector3(-1, -2, -1), scene);
+            light1.position = new BABYLON.Vector3(20, 39, 20);
+            light1.intensity = 0.5;
+            light2 = new BABYLON.SpotLight("spot02", new BABYLON.Vector3(0, 40, 20), new BABYLON.Vector3(-1, -2, -1), 1.1, 16, scene);
+            light2.intensity = 0.5;
+        }
+        /*********************************-CREATE-CAMERA-******************************/
+        var createCamera = function(cam) {
+            cam = cam || 'default'; 
+            if(cam==='default'){ //ARC-ROTATE-CAMERA
+                arcRotateCamera = new BABYLON.ArcRotateCamera("GlobalRotativeCamera1",  0, 0, 0, new BABYLON.Vector3(0, 0, 0), scene);
+                arcRotateCamera.setPosition(new BABYLON.Vector3(0, 50, 80));
+                arcRotateCamera.setTarget(BABYLON.Vector3.Zero());
+                arcRotateCamera.attachControl(canvas, true);
+            } else if(cam==='free'){ //FREE-ROAM-CAMERA
+                var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 90,-90), scene);
+                camera.setTarget(BABYLON.Vector3.Zero());
+                camera.attachControl(canvas, true);
+            }
+        }
+        /*********************************-CREATE-ASSETS-******************************/
+        var createAssets = function() {
+            var assetsManager = new BABYLON.AssetsManager(scene); 
+            engine.loadingUIText = "Welcome..."; //----ASSETS-MANAGER--------------Loading Indicator
+            // assetsManager.addMeshTask("asset2", "", "./3d/assets/", "skull.babylon").onSuccess = function (task){
+            //     task.loadedMeshes.forEach(function(e,i){
+            //             task.loadedMeshes[0].position = new BABYLON.Vector3(0,30,150);
+            //     });
+            // };
+            assetsManager.addMeshTask("asset3", "", "./3d/assets/", "worldbox2.babylon").onSuccess = function (task){};
+            assetsManager.onFinish = function(tasks) {
+                engine.runRenderLoop(function() {
+                    scene.render();
+                });
+            };
+            assetsManager.load();  // IMPORTANT-.
+        }
+        /*********************************-CREATE-SOUNDS-******************************/
+        var createSounds = function( ){ //
+            nx.sonic.loaded=1;
+            nx.sonic.soundObjTrack1=new BABYLON.Sound("bg1","./sonic/nxBoomCore2cc0.mp3",scene,null,{loop:false,autoplay:false, volume:0.04});
+            nx.sonic.soundObjBlip2= new BABYLON.Sound("blipIn1","./sonic/nxBlip2b.mp3", scene, null, { loop: false, autoplay: false });
+            BABYLON.Engine.audioEngine.setGlobalVolume(0.8); //0.02 is on the quiet side.
+        }
+        /***************************************-3D-MESH-*********************************/
+        var zoneboxes = [];
+        var createBoxes = function(){
+            // ZONE BOXES-.
+            zoneboxes[0] = BABYLON.MeshBuilder.CreateBox("box", {height: 3, width: 20, depth: 20}, scene);
+            zoneboxes[0].position = new BABYLON.Vector3(15, 1, -15);
+            zoneboxes[0].visibility = 0.6;
+            zoneboxes[0].material = new BABYLON.StandardMaterial("red", scene);
+            zoneboxes[0].material.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[0].material.specularColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[0].material.emissiveColor = new BABYLON.Color3(1, 0, 0);
+
+            zoneboxes[1] = BABYLON.MeshBuilder.CreateBox("box2", {height: 3, width: 20, depth: 20}, scene);
+            zoneboxes[1].position = new BABYLON.Vector3(15, 0, 15);
+            zoneboxes[1].visibility = 0.6;
+            zoneboxes[1].material = new BABYLON.StandardMaterial("green", scene);
+            zoneboxes[1].material.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[1].material.specularColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[1].material.emissiveColor = new BABYLON.Color3(0, 1, 0);
+
+            zoneboxes[2] = BABYLON.MeshBuilder.CreateBox("box3", {height: 3, width: 20, depth: 20}, scene);
+            zoneboxes[2].visibility = 0.6;
+            zoneboxes[2].position = new BABYLON.Vector3(-15, 0, -15);
+            zoneboxes[2].material = new BABYLON.StandardMaterial("blue", scene);
+            zoneboxes[2].material.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[2].material.specularColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[2].material.emissiveColor = new BABYLON.Color3(0, 0, 1);
+
+            zoneboxes[3] = BABYLON.MeshBuilder.CreateBox("box4", {height: 3, width: 20, depth: 20}, scene);
+            zoneboxes[3].visibility = 0.6;
+            zoneboxes[3].position = new BABYLON.Vector3(-15, 0, 15);
+            zoneboxes[3].material = new BABYLON.StandardMaterial("purple", scene);
+            zoneboxes[3].material.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[3].material.specularColor = new BABYLON.Color3(0, 0, 0);
+            zoneboxes[3].material.emissiveColor = new BABYLON.Color3(0.5, 0, 0.5);
+        }
+        var centroid;
+        var createCentroid = function (){
+            var material = new BABYLON.StandardMaterial("k", scene);
+            var centroid = BABYLON.Mesh.CreateSphere("centroid", 16, 3, scene);
+            centroid.position = new BABYLON.Vector3(0,10,0);
+            material.diffuseColor = new BABYLON.Color3(1, 1, 1);
+            centroid.material = material;
+        }
+        /*********************************CREATE-SCENE******************************/
+        var createScene = function(){
+            scene = new BABYLON.Scene(engine);
+            createSky();
+            createGround();
+            createLights();
+            createCamera();
+            createAssets();
+            createSounds(); //op: create sound after user gesture.
+            createBoxes();
+            createCentroid();
+            canvas.tabIndex = 0; //accessibility
+            return scene;
+        }
+        /******************************Initialization******************************/
+        scene = createScene();
+        // scene.clearColor = new BABYLON.Color3(.33,.44,.55);
+        engine.runRenderLoop(function(){
+            scene.render();
+        });
+        window.addEventListener('resize', function(){
+            engine.resize();
+        });
+    } //END-initWrAppShell-.
+});
+</script>
+<!--**************************************************-BUTTON-COMPONENT-*****************************************-->
+<style>
+    .anmBtn{ font-family:fantasy; }
+    .steelBlueBtnDlg { background-color: rgba(150,180,200,0.95); color:#222; border:  #748696 solid 2px; font-size: 22px;
+        border-radius: 100%; height: 45px; width: 45px; cursor: pointer; user-select: none; text-shadow: 0 1px 0 rgba(255,255,255,.8); outline: none; }
+    .middleBtn{ position: absolute; top: 50%; width: 100%; }
+    .middleBtn section{ width:100px; margin:0 auto; }
+    .middleBtn button{ width:100px; }
+</style>
+<article class="middleBtn">
+    <section>
+        <button id=openBtn aria-label="open" class="steelBlueBtnDlg onBtnHaloYellow" >
+            <span class=anmBtn>OPEN!</span>
+        </button>
+    </section>
+</article>
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function(){
+        var openBtn = $('#openBtn');
+        var sonicBtn = $('#sonicBtn');
+        openBtn.on("click" , function(e){ 
+            initWrAppShell(); 
+            openBtn.hide(1000)
+            sonicBtn.show(1000)
+        });
+    });
+</script>
+<!--**************************************************-END-BUTTON-COMPONENT-*****************************************-->
+<!--**************************************************-LIBS-*****************************************-->
+<script async type="text/javascript" src="./lib/jquery/jquery-3.2.1.min.js"></script>
+<script async type="text/javascript" src="./lib/babylon/hand.min-1.2.js"></script>
+<script type="text/javascript" src="./lib/babylon/babylon.3.0.min.js" ></script> 
+<script type="text/javascript" src="./lib/babylon/materials/babylon.gridMaterial.min.js"></script> 
+<script async type="text/javascript" src="./app.js"></script>
+<!--**************************************************-END-LIBS-*****************************************-->
+</body>
+<!--GoogleAnalytics-->
+<!--     <script async type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-91012342-1', 'auto');
+  ga('send', 'pageview');
+</script> -->
+<!--GoogleAnalytics-->
+</html>
