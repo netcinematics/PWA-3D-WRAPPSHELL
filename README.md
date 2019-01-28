@@ -1,22 +1,22 @@
 # PWA-3D-WRAPPSHELL
-A PWA Template, with 3D power by BabylonJS, a hint of jQuery animation spice, and pure vanilla Wide-Ranging-AppShell. Introducing the VanillaWeb with Wrappables, in a wide-ranging-appshell. Welcome. Ready to get cookin' with Design Patterns? 
+A PWA Template, with 3D power by BabylonJS, a hint of jQuery animation spice, and pure vanilla Wide-Ranging-AppShell. Introducing the VanillaWeb with Wrappables, in a wide-ranging-appshell. Welcome. Take a look below for some PWA Design Patterns.
 
 <img src="promo/ops11.png" width="300px" border="1px solid #ccc" style="border-radius: 13px;">
 
 # PWA Wrappables
 
-The first wrappable APP PATTERN is called: TITLESCREEN. 
+The first PWA Wrappable App Pattern is called: aTITLESCREEN. 
 
 <hr>
 
-## TITLESCREEN-(PWA-WRAPPABLE)-.
+## aTITLESCREEN-.
 
-A lot like inheriting from SplashScreen. But also, "TitleScreen evolves from SplashScreen" as a SEQUENCE. After SplashScreen, show a lightning quick user-interactive TITLESCREEN. Why???
+Like inheriting from SplashScreen, but "TitleScreen evolves from SplashScreen". It does so as a SEQUENCE: after SplashScreen completes, show a lightning quick user-interactive TITLESCREEN. Why???
 
 
 ## PURPOSE
 
-<i>A TITLESCREEN PWA Wrappable maintains the highest Lighthouse Audit score possible</i>. It serves as a PERFORMANCE-BASELINE. And it opens up a HOST of other patterns. Which was a terribly low-grade-pun. Your PWA-Campfire all set up. Let's get cookin! : )
+<i>A TITLESCREEN PWA Wrappable maintains the highest Lighthouse Audit score possible</i>. It serves as a PERFORMANCE-BASELINE. And it opens up a HOST of other patterns. Which is a terrible pun of low-grade-humor. Like anything. Your PWA-Campfire all set up. Let's get cookin!
 
 
 ## Ingredients
@@ -26,17 +26,20 @@ A lot like inheriting from SplashScreen. But also, "TitleScreen evolves from Spl
 > - hide the BUTTON.
 
 ### EXAMPLE
-A TITLESCREEN wrapper with black-screen (canvas) and open-button...
-<img src="promo/ops8.png" width="200px" border="1px solid #ccc" style="border-radius: 13px;">
-Gives a Lighthouse Audit Score (baseline), like this...
-<img src="promo/baseline1.png" width="400px" border="1px solid #ccc" style="border-radius: 13px;">
 
+A TITLESCREEN wrapper with black-screen (canvas) and open-button...
+
+<img src="promo/ops8.png" width="200px" border="1px solid #ccc" style="border-radius: 13px;">
+
+Gives a Lighthouse Audit Score (baseline), like this...
+
+<img src="promo/baseline1.png" width="400px" border="1px solid #ccc" style="border-radius: 13px;">
 
 Isn't that radical? 
 
-### We think so. :) 
+We think so. :) 
 
-With more in the pipeline.
+### More in the pipeline.
 
 <hr>
 
@@ -48,9 +51,7 @@ MIT.
 
 ## TUTORIAL
 
-# 3D-APPSHELL PWA
-PWA Template with BabylonJS
-# A 3D Progressive Web Appshell Template
+PWA Template with BabylonJS - A 3D Progressive Web Appshell Template
 
 Powered by:
 
